@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+body {
+    background-color: hsl(229, 57%, 11%);
+    font-family: 'Raleway', sans-serif;
+}
+
+.bg {
+    background: url(images/bg-desktop.png) top left/cover;
+    width: 100vw;
+    height: 50vh;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 64vh;
+}
+
+.wrapper {
+    height: 180px;
+    min-width: 280px;
+    background-color: hsl(228, 56%, 26%);
+    margin-right: 30px;
+    border-radius: 15px 75px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.wrapper > svg{
+    margin-bottom: 30px;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    
+}
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: hsl(229, 57%, 11%);
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-box {
+    height: 140px;
+    min-width: 500px;
+    background-color:hsl(228, 56%, 26%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color:hsl(243, 100%, 93%);
+    padding: 0 40px 38px 40px;
+    position: relative;
+}
+
+.upload-box > p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.upload-box span {
+    font-weight: 700;
+}
+
+.slider {
+    width: 100%;
+    height: 20px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.slider::before {
+    content: "";
+    width: 75%;
+    height: 16px;
+    background: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 20px;
+}
+
+.slider::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: hsl(243, 100%, 93%);
+    position: absolute;
+    top: 3px;
+    right: 25%;
+}
+
+.size {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.size span {
+    font-size: 0.8rem;
+}
+
+.remaining {
+    position: absolute;
+    background-color: hsl(243, 100%, 93%);
+    height: 65px;
+    width: 150px;
+    border-radius: 10px 10px 0 10px;
+    top: -40px;
+    right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remaining span {
+    font-size: 2.5rem;
+    color: hsl(229, 57%, 11%);
+    margin-right: 10px;
+}
+
+.remaining p {
+    color: hsl(229, 7%, 55%);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.remaining::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px hsl(243, 100%, 93%) solid;
+    border-right: 10px hsl(243, 100%, 93%) solid;
+    border-bottom: 10px transparent solid;
+    border-left: 10px transparent solid;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+
+}
+
+
+@media screen and (min-width:376px) and (max-width:821px) {
+    .bg {
+        background: url(images/bg-mobile.png) center center/cover;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    .wrapper {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        
+    }
+
+    .upload-box {
+        width: 100%;
+        min-width: 300px;
+        max-width: 500px;
+    }
+
+    .remaining {
+        height: 60px;
+        top: 78%;
+        left: 35%;
+        border-radius: 10px;
+    }
+
+    .remaining::after {
+        content: "";
+        border: none;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .bg {
+        background: url(images/bg-mobile.png) center center/cover;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .wrapper {
+        width: 100%;
+        min-width: 0;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .upload-box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .remaining {
+        top: 78%;
+        left: 28%;
+        border-radius: 10px;
+    }
+
+    .remaining::after {
+        content: "";
+        border: none;
+    }
+}
+
+
